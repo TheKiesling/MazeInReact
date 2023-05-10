@@ -1,0 +1,26 @@
+.button {
+    background-color: #5CAD4A;
+    color: #F0F2EB;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    width: hug;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+.button[disabled] {
+    background-color: #DDD;
+    color: #5CAD4A;
+    cursor: not-allowed;
+}
+  
+.button.secondary {
+    background-color: #F0F2EB;
+    color: #208D45;
+    border: 1px solid #208D45;
+}
+  
