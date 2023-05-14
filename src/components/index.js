@@ -1,1 +1,5 @@
 export { default as Button } from './Button/Button'
+export { default as Player } from './Player/Player'
+export { default as Wall } from './Wall/Wall'
+export { default as Goal } from './Goal/Goal'
+export { default as Game } from './Game/Game'
