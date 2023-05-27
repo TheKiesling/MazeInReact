@@ -1,6 +1,6 @@
 .home{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #F0F2EB;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .home > img{
-    width: 500px;
-    height: 500px;
+    width: 40%;
+    height: 40%;
     object-fit: cover;
 }

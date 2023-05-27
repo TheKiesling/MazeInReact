@@ -1,0 +1,19 @@
+.maze{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    background-color: #F0F2EB;
+    color: #208D45;
+    border: 1px solid #208D45;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.time{
+    padding: 10px;
+    background-color: #F0F2EB;
+    color: #208D45;
+    border: 1px solid #208D45;
+    border-radius: 5px;
+}
