@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react'
 import { StoreContext } from 'storeon/react'
 import store from '@store'

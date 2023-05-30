@@ -9,7 +9,6 @@ const store = createStoreon([
 ])
 
 const navigate = (target) => {
-  console.log('NAVIGATING TO', target)
   store.dispatch(routerNavigate, target)
 }
 

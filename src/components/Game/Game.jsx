@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import {
@@ -27,7 +28,6 @@ const Game = ({
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      console.log('Hey')
       switch (event.key) {
         case 'ArrowUp':
           movePlayer(playerPosition.x, playerPosition.y - 1)
@@ -69,21 +69,21 @@ const Game = ({
     >
       {json.map((row, rowIndex) => row.map((col, colIndex) => {
         if (rowIndex === playerPosition.y && colIndex === playerPosition.x) {
-          return <Player key={`${rowIndex}.${colIndex}`} character={character} position={position} />
+          return <Player character={character} position={position} />
         }
         switch (col) {
           case 'g':
-            return <Goal key={`${rowIndex}.${colIndex}`} />
+            return <Goal />
           case '-':
-            return <Wall key={`${rowIndex}.${colIndex}`} theme={theme} direction="Horizontal" />
+            return <Wall theme={theme} direction="Horizontal" />
           case '|':
-            return <Wall key={`${rowIndex}.${colIndex}`} theme={theme} direction="Vertical" />
+            return <Wall theme={theme} direction="Vertical" />
           case '+':
-            return <Wall key={`${rowIndex}.${colIndex}`} theme={theme} direction="Corner" />
+            return <Wall theme={theme} direction="Corner" />
           case ' ':
-            return <Way key={`${rowIndex}.${colIndex}`} />
+            return <Way />
           default:
-            return <Way key={`${rowIndex}.${colIndex}`} />
+            return <Way />
         }
       }))}
     </div>

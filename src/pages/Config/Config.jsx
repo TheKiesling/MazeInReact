@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import {
@@ -29,7 +30,6 @@ const Config = ({ configForm, handleChange }) => {
   }, [configForm.time])
 
   useEffect(() => {
-    console.log(configForm.limitTime)
     if (configForm.width <= 7 && configForm.width >= 4
       && configForm.height <= 7 && configForm.height >= 4
       && configForm.player !== null
@@ -133,11 +133,7 @@ const Config = ({ configForm, handleChange }) => {
 
 Config.propTypes = {
   configForm: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
-  theme: PropTypes.string.isRequired,
-  json: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-  w: PropTypes.number.isRequired,
-  h: PropTypes.number.isRequired,
-  setGameOver: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default Config

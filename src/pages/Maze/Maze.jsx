@@ -1,11 +1,13 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Game } from '@components'
 import { navigate } from '@store'
 import styles from './Maze.module.css'
 
 const Maze = ({ configForm }) => {
   const {
-    width, height, player, theme, time, limitTime,
+    width, height, player, theme, limitTime,
   } = configForm
   const [mazeLayout, setMazeLayout] = useState(null)
   const [gameOver, setGameOver] = useState(false)
@@ -25,7 +27,6 @@ const Maze = ({ configForm }) => {
 
   useEffect(() => {
     loadMaze()
-    console.log(width)
   }, [configForm])
 
   useEffect(() => {
@@ -61,12 +62,16 @@ const Maze = ({ configForm }) => {
         character={player}
         theme={theme}
         json={mazeLayout}
-        w={parseInt(width)}
-        h={parseInt(height)}
+        w={parseInt(width, 10)}
+        h={parseInt(height, 10)}
         setGameOver={setGameOver}
       />
     </div>
   )
+}
+
+Maze.propTypes = {
+  configForm: PropTypes.arrayOf(PropTypes).isRequired,
 }
 
 export default Maze
