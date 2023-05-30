@@ -12,7 +12,8 @@ module.exports = {
   plugins: ['react'],
   rules: {
     semi: ['error', 'never'],
-    'max-len': ['warn', { code: 120 }],
+    'max-len': ['warn', { code: 130 }],
     'react/function-component-definition': 'off',
+    'import/prefer-default-export': 'off',
   },
 }
